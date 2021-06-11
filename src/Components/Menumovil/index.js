@@ -1,0 +1,1 @@
+export {default as Menumovil} from './Menumovil.jsx';

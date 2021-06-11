@@ -1,0 +1,66 @@
+@import 'variables';
+
+.eventos {
+    padding-bottom: 2rem;
+    .contenedor {
+        .titulo {
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i {
+                color: $celeste;
+                font-size: 3rem;
+            }
+            h2{
+                color: $azul;
+            }
+        }
+        .proximos{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 3rem;
+            margin-bottom: 4rem;
+            .evento {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;                
+                img{
+                    width:100%;
+                    height: 100%;
+                    border-radius: 1rem;
+                    background-size: cover !important;
+                    background-position: center !important;
+                    margin-bottom: 1rem;
+                }
+                .nombre{
+                    color: $azul;
+                    font-weight: 600;
+                }
+            }            
+        }
+    }
+}
+
+@media screen and (min-width: $tableta) {
+    .eventos {
+        .contenedor {
+            .proximos {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $escritorio) {
+    .eventos {
+        .contenedor {
+            .proximos {
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+    }
+}

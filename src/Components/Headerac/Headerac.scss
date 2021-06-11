@@ -1,0 +1,41 @@
+@import 'variables';
+
+header {
+    height: 100vh;
+    background: url('https://blogapi.uber.com/wp-content/uploads/2019/01/Canopy-en-La-Puerta-del-Diablo.png');
+    background-size: cover !important;
+    background-position: center !important;
+    .contenedor {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            width:80%;
+            color: $blanco;
+            text-align: justify;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        h1 {
+            color: $azul;
+        }
+    }
+}
+
+@media screen and (min-width: $tableta) {
+    header {
+        background: url('http://obesityelsalvador.com/wp-content/uploads/2013/03/turimajes-sobre-el-turismo.jpg');
+        height: auto;
+        padding: 15rem 0;
+    }
+}
+
+@media screen and (min-width: $escritorio) {
+    header {
+        background: url('https://elsalvadorgram.com/wp-content/uploads/2019/02/plaza-libertad.png');
+        height: auto;
+        padding: 20rem 0;
+    }
+}

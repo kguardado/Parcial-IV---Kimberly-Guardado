@@ -1,0 +1,87 @@
+@import 'variables';
+
+.menuMovil {
+    width:100%;
+    height: 80px;
+    background: $blanco;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .25);
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index:1000;
+    .contenedor {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn {
+            i {
+                font-size: 2rem;
+                color: $naranja;
+            }
+        }
+        .logomovil {
+            width:200px;
+        }
+    }
+
+}
+.blur{
+    width:100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:800;
+    pointer-events: none;
+    transition: ease-in-out .5s;
+}
+.blur.activo{
+    background: rgba(0, 0, 0, .45);
+    backdrop-filter: blur (6px);
+    pointer-events: all;
+}
+
+.enlacesmoviles{
+    position: fixed;
+    top: 0;
+    left: -75%;
+    width: 75%;
+    height: 100vh;
+    background: $blanco;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 50px solid $acua;
+    padding-top: 80px;
+    transition: ease-in-out .5s;
+    a{
+        font-size: 1.75rem;
+        text-decoration: none;
+        padding: .5rem 1.5rem;
+    }
+}
+.enlacesmoviles.activo{
+    left: 0;
+}
+
+@media screen and (min-width: $tableta) {
+    .enlacesmoviles {
+        width: 45%;
+        left: -45%;
+    }
+}
+@media screen and (min-width: $escritorio) {
+    .menuMovil {
+        display: none;
+    }
+    .blur {
+        display: none;
+    }
+    .enlacesmoviles {
+        display: none;
+    }
+}

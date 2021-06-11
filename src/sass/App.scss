@@ -1,0 +1,49 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&display=swap');
+
+*{
+    font-family: $cairo;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $gris;
+    &::selection {
+        background: $acua;
+        color: $negro;
+    }
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+
+button{
+    border:none;
+    border-radius: 5px;
+    background: $naranja;
+    color: $blanco;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    align-items: center;
+    transition: ease-in-out .15s;
+}
+
+nav, header, header, footer {
+    width: 100%;
+    overflow: hidden;
+}
+
+input, select{
+    font-size: 1rem;
+    padding: .25rem .5rem;
+    border-radius: .40rem;
+    border: 2px solid $naranja;
+}
+
+input, select, a, button{
+    outline: none;
+}

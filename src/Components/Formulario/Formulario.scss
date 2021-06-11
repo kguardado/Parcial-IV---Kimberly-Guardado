@@ -1,0 +1,72 @@
+@import 'variables';
+
+.contacto{
+    padding: 6rem 0;
+    .contenedor{
+        max-width: 550px;
+        .texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 3rem;
+                color: $naranja;            
+            }
+            h2{
+                color: $azul;
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+            p{
+                text-align: center;
+            }
+        }
+        .formulario{
+            margin-bottom: 1rem;
+            h3{
+                text-align: center;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                color: $azul;
+            }
+            form{
+                .campo{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: .5rem;
+                    label{
+                        margin-bottom: .5rem;
+                        font-size: .9rem;
+                    }
+                }
+                .campodoble{
+                    display:flex;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    font-size: .9rem;
+                    label{
+                        font-size: .9rem;
+                    }
+                }
+                .error{
+                    color: red;
+                    margin-bottom: .5rem;
+                    span{
+                        color: red;
+                        font-weight: bold;
+                    }
+                }
+                .botonera{
+                    display: flex;
+                    justify-content: center;
+                    button{
+                        padding: .5rem 3rem;
+                        font-size: 1rem;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

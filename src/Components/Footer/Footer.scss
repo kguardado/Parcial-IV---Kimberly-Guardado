@@ -1,0 +1,26 @@
+@import 'variables';
+
+footer{
+    padding: 3rem 0rem;
+    color: $acua;
+    .contenedor{
+        .redesSociales{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                padding: .75rem;
+            }
+            i{
+                font-size: 2rem;
+                color: $naranja;
+            }
+        }
+        div{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

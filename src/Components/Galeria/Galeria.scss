@@ -1,0 +1,103 @@
+@import 'variables';
+
+.galeria {
+    .cabecera{
+        width: 100%;
+        background: $acua;
+        padding: 4rem 0;
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                color: $azul;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .imagenes {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        margin: 2rem;
+        div {
+            cursor: pointer;
+            height: 150px;
+            margin-top: 2rem;
+            background-size: cover !important;
+            background-position: center !important;
+            transition: ease-in-out .25s;
+            &:hover{
+                opacity: .6;
+            }
+        }
+    }
+}
+
+.lightbox{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .0);
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out .5s;
+    span{
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: $blanco;
+        padding: 1rem;
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        i{
+            margin-left: .5rem;
+            color: $blanco;
+
+        }
+    }
+    img{
+        opacity: 0;
+        max-width: 90%;
+        max-height: 90%;
+        transition: ease-in-out .3s;
+    }
+}
+.lighbox.activo{
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(6px);
+    pointer-events: all;
+    span{
+        opacity: 1;
+        pointer-events: all;
+
+    }
+    img {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: $tableta) {
+    .galeria {
+        .imagenes {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (min-width: $escritorio) {
+    .galeria {
+        .imagenes {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
